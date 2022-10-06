@@ -8,12 +8,11 @@ driver = webdriver.Chrome()
 driver.get('https://www.google.com/')
 
 # initialize searchField variable with xpath of search box div on google webpage
-# note: to find the xpath, open google.com in chrome > inspect element > hover over divs until search box is
-# highlighted > right click > copy > xpath
+# note: to find the xpath, open google.com in chrome > inspect element > click area on webpage that you want python
+# to interact with > right click tag > copy > xpath
 searchField = driver.find_element("xpath",'/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
-#'/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]')
 
-# input value provided as string parameter to search box
+# input to search box string
 searchField.send_keys('florida state university')
 
 # submit search request
