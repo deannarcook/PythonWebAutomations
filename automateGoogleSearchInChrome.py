@@ -1,3 +1,5 @@
+# This script was created to practice using Selenium to automate a Google search in Google Chrome.
+
 from selenium import webdriver
 
 # open chrome webdriver
