@@ -1,4 +1,5 @@
-# 20221005: code isn't working. need to find a way to automate recaptcha image test.
+# This code was created while practicing automate logging into Quora.
+# Note 20221005: Code isn't working. need to find a way to automate recaptcha image test.
 
 from time import sleep
 
