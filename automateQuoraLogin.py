@@ -10,19 +10,26 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
+# login info
 UI_email = input('Enter your login email: ')
-
 UI_password = input('Enter your password: ')
-# open quora website
+
+
 driver = webdriver.Chrome()
 
-# html tag element for email field
+# open quora website
 driver.get('https://www.quora.com/')
 
+# xpath element for email field
 emailField = driver.find_element('xpath','//*[@id="email"]')
+
+# enter email address in email field
 emailField.send_keys(UI_email)
 
+# xpath element for password field
 passwordField = driver.find_element('xpath','//*[@id="password"]')
+
+# enter password in password field
 passwordField.send_keys(UI_password)
 
 sleep(10)
@@ -32,6 +39,8 @@ WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "di
 
 sleep(3)
 
+# xpath for login button
 loginButton = driver.find_element('xpath','//*[@id="root"]/div/div[2]/div/div/div/div/div/div[2]/div[2]/div[5]/button')
 
+# click login button
 loginButton.click()
