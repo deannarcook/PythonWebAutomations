@@ -7,7 +7,7 @@ def inputLoginInfo(prompt):
 
 def launchChromeDefaultProfile(url):
     options = webdriver.ChromeOptions() # create object of ChromOptions class
-    options.add_argument = {'/Users/deannacook/Library/Application Support/Google/Chrome/Default'} # add chrome profile path
+    options.add_argument = {'/Users/deannacook/Library/Application Support/Google/Chrome/Default'} # add chrome profile path - to find the chrome profile path go to chrom://version in your chrome web browser\\
     executablePath = '/usr/local/bin/chromedriver'
     driver = webdriver.Chrome(executablePath,options=options)  # set chromedriver
     # executable path
